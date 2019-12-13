@@ -3,7 +3,15 @@
         <title>Mei's blog</title>
     <head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <div>
+            <h1><a href="/">Mei's Blog</a>a><h1>
+        </div>
+    {%for post in posts %}
+        <div>
+            <p> publicado: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
     </body>
 </html>
